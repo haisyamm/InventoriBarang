@@ -48,7 +48,7 @@
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">
-                                    Barang
+                                    Assets
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     Regional
