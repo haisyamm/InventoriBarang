@@ -64,43 +64,63 @@
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Master Data
+                                    Data Master
                                 </span>
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">
-                                    Master Vendor
+                                    Barang
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    Master Regional
+                                    Regional
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    Master Outlet
+                                    Vendor
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Outlet
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/file-text -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-text" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                                        <line x1="9" y1="9" x2="10" y2="9"></line>
+                                        <line x1="9" y1="13" x2="15" y2="13"></line>
+                                        <line x1="9" y1="17" x2="15" y2="17"></line>
+                                    </svg>
+                                </span>
+                                <span class="nav-link-title">
+                                    Assets Management
+                                </span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./layout-horizontal.html">
+                                    Order
+                                </a>
+                                <a class="dropdown-item" href="./layout-boxed.html">
+                                    Release
                                 </a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('home') }}">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                    <!-- Download SVG icon from http://tabler-icons.io/i/QrCode -->
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/home -->
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <rect x="4" y="4" width="6" height="6" rx="1"></rect>
-                                        <line x1="7" y1="17" x2="7" y2="17.01"></line>
-                                        <rect x="14" y="4" width="6" height="6" rx="1"></rect>
-                                        <line x1="7" y1="7" x2="7" y2="7.01"></line>
-                                        <rect x="4" y="14" width="6" height="6" rx="1"></rect>
-                                        <line x1="17" y1="7" x2="17" y2="7.01"></line>
-                                        <line x1="14" y1="14" x2="17" y2="14"></line>
-                                        <line x1="20" y1="14" x2="20" y2="14.01"></line>
-                                        <line x1="14" y1="14" x2="14" y2="17"></line>
-                                        <line x1="14" y1="20" x2="17" y2="20"></line>
-                                        <line x1="17" y1="17" x2="20" y2="17"></line>
-                                        <line x1="20" y1="17" x2="20" y2="20"></line>
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                                        <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                        <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Generate QrCode
+                                    Inventori
                                 </span>
                             </a>
                         </li>
@@ -118,21 +138,21 @@
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Rekap Data
+                                    Report
                                 </span>
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="./layout-horizontal.html">
-                                    Absensi
+                                    Inventori By Outlet
                                 </a>
                                 <a class="dropdown-item" href="./layout-boxed.html">
-                                    Perizinan
+                                    Inventori By Regional
                                 </a>
-                                <a class="dropdown-item" href="./layout-vertical.html">
-                                    Gudang Senjata
+                                <a class="dropdown-item" href="./layout-boxed.html">
+                                    Inventori Check-In & Out
                                 </a>
-                                <a class="dropdown-item" href="./layout-vertical.html">
-                                    Logistik
+                                <a class="dropdown-item" href="./layout-boxed.html">
+                                    Inventori Order & Release
                                 </a>
                             </div>
                         </li>
