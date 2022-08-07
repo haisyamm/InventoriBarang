@@ -15,8 +15,8 @@ class RolesSeeder extends Seeder
     public function run()
     {
         $this->buildRole('1', 'Admin');
-        $this->buildRole('2', 'regional');
-        $this->buildRole('3', 'outlet');
+        $this->buildRole('2', 'Regional');
+        $this->buildRole('3', 'Outlet');
     }
 
     public function buildRole($code, $name)
