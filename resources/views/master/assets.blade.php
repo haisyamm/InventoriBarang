@@ -4,7 +4,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Invoices</h3>
+                <h3 class="card-title">Assets</h3>
             </div>
             <div class="card-body border-bottom py-3">
                 <div class="d-flex">
@@ -40,6 +40,7 @@
                             <th>Uom</th>
                             <th>Purchase Price</th>
                             <th>Selling Price</th>
+                            <th>Stock</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -51,8 +52,9 @@
                             <td>{{ $val->name }}</td>
                             <td>{{ $val->brand }}</td>
                             <td>{{ $val->uom }}</td>
-                            <td>{{ $val->purchase_price }}</td>
-                            <td>{{ $val->selling_price }}</td>
+                            <td>{{ App\Models\GlobalModel::currency_format($val->purchase_price) }}</td>
+                            <td>{{ App\Models\GlobalModel::currency_format($val->selling_price) }}</td>
+                            <td>{{ $val->stock->stock }}</td>
                             <td class="text-end">
                                 <span class="dropdown">
                                     <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>

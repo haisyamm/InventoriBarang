@@ -5,7 +5,7 @@
     <div class="card-body">
         <h2 class="text-center mb-4 h1">Login</h2>
         <div class="mb-3">
-            <label class="form-label">Nrp</label>
+            <label class="form-label">Username</label>
             <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
             @error('email')

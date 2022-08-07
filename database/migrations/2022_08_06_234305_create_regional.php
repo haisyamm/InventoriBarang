@@ -15,6 +15,9 @@ class CreateRegional extends Migration
     {
         Schema::create('regional', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('regional');
+            $table->string('address');
             $table->timestamps();
         });
     }

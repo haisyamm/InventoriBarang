@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProduct extends Migration
+class CreateDetailOrder extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateProduct extends Migration
      */
     public function up()
     {
-        Schema::create('product', function (Blueprint $table) {
+        Schema::create('detail_order', function (Blueprint $table) {
             $table->id();
-            $table->string('code')->unique();
-            $table->string('name');
-            $table->string('brand')->nullable();
-            $table->string('uom')->nullable();
+            $table->bigInteger('header_order_id');
+            $table->bigInteger('product_id');
             $table->double('purchase_price');
             $table->double('selling_price');
+            $table->double('qty');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreateProduct extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product');
+        Schema::dropIfExists('detail_order');
     }
 }

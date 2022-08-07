@@ -11,4 +11,9 @@ class ProductModel extends Model
 
     protected $table = 'product';
     protected $fillable = ['code', 'name', 'brand', 'uom', 'purchase_price', 'selling_price'];
+
+    public function stock()
+    {
+        return $this->hasOne(ProductStockModel::class, 'product_code', 'code');
+    }
 }
