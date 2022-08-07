@@ -47,16 +47,16 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{ route('master.assets') }}">
                                     Assets
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{ route('master.regional') }}">
                                     Regional
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{ route('master.vendor') }}">
                                     Vendor
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{ route('master.outlet') }}">
                                     Outlet
                                 </a>
                             </div>
@@ -79,10 +79,10 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./layout-horizontal.html">
+                                <a class="dropdown-item" href="{{ route('assets_management.order') }}">
                                     Order
                                 </a>
-                                <a class="dropdown-item" href="./layout-boxed.html">
+                                <a class="dropdown-item" href="{{ route('assets_management.release') }}">
                                     Release
                                 </a>
                             </div>
