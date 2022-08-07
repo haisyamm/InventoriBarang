@@ -19,8 +19,8 @@ class CreateProduct extends Migration
             $table->string('name');
             $table->string('brand');
             $table->string('uom');
-            $table->string('harga_beli');
-            $table->string('harga_jual');
+            $table->string('purchase_price');
+            $table->string('selling_price');
             $table->timestamps();
         });
     }
