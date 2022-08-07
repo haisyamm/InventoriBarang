@@ -43,7 +43,7 @@
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Data Master
+                                    Master Data
                                 </span>
                             </a>
                             <div class="dropdown-menu">
