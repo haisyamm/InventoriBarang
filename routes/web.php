@@ -35,4 +35,6 @@ Route::group(['middleware' => 'auth'], function () {
     // Start Management ======================
     Route::get('/assets_management/order', [App\Http\Controllers\Management\OrderController::class, 'index'])->name('assets_management.order');
     Route::get('/assets_management/release', [App\Http\Controllers\Management\ReleaseController::class, 'index'])->name('assets_management.release');
+    // Inventori ============================
+    Route::get('/inventory', [App\Http\Controllers\Inventory\InventoryController::class, 'index'])->name('inventory');
 });
