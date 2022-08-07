@@ -38,6 +38,9 @@ Route::group(['middleware' => 'auth'], function () {
     // Order ================================
     Route::get('/order/create', [App\Http\Controllers\Management\OrderController::class, 'create'])->name('order.create');
     // Order ================================
+    // Release ==============================
+    Route::get('/release/create', [App\Http\Controllers\Management\ReleaseController::class, 'create'])->name('release.create');
+    // Release ==============================
     // Inventori ============================
     Route::get('/inventory', [App\Http\Controllers\Inventory\InventoryController::class, 'index'])->name('inventory');
     // Inventori ============================

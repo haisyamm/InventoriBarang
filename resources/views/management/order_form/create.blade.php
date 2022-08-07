@@ -1,4 +1,4 @@
-@extends('layouts.app_template', ['content_padding' => false])
+@extends('layouts.app_template', ['asside' => false, 'back' => 'Order', 'back_url' => route('assets_management.order')])
 @section('content')
 <div class="row">
     <div class="col-md-4">
@@ -13,7 +13,7 @@
                             <line x1="21" y1="21" x2="15" y2="15"></line>
                         </svg>
                     </span>
-                    <input type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
+                    <input type="text" value="" class="form-control" placeholder="Enter product code" aria-label="Search in website">
                 </div>
                 <div class="mt-3">
                     <h3 class="mb-0">Search Result</h3>
@@ -99,10 +99,71 @@
                     </tbody>
                 </table>
             </div>
-            <div class="card-footer d-flex align-items-center text-dark">
+            <div class="card-footer d-flex align-items-center text-dark py-2">
                 <p class="m-0 h2">Total</p>
                 <div class="m-0 ms-auto">
-                    <h2>300.000</h2>
+                    <h2 class="h1">30.000.000</h2>
+                </div>
+            </div>
+        </div>
+        <hr class="my-3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <div>
+                            <h3>Vendor</h3>
+                            <div class="form-group">
+                                <select name="vendor_code" id="vendor_code" class="form-control">
+                                    @foreach($vendor as $val)
+                                    <option value="{{ $val->code }}">{{ $val->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- If regional exist -->
+                            @if(isset($regional))
+                            <h3>Regional</h3>
+                            <div class="form-group">
+                                <select name="regional_id" id="regional_id" class="form-control">
+                                    @foreach($regional as $val)
+                                    <option value="{{ $val->id }}">{{ $val->regional }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            @endif
+                        </div>
+                        <!-- If outlet exist -->
+                        @if(isset($outlet))
+                        <div>
+                            <h3>Outlet</h3>
+                            <div class="form-group">
+                                <select name="outlet_id" id="outlet_id" class="form-control">
+                                    @foreach($outlet as $val)
+                                    <option value="{{ $val->id }}">{{ $val->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h3>Order Date</h3>
+                            <strong>{{ Date('d M Y') }}</strong>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <h3>Total products</h3>
+                            <strong>10 Product</strong>
+                        </div>
+                        <hr>
+                        <a href="#" class="btn btn-danger w-100">Order</a>
+                    </div>
                 </div>
             </div>
         </div>

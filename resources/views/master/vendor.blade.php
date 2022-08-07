@@ -3,8 +3,11 @@
 <div class="row">
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header d-flex justify-content-between">
                 <h3 class="card-title">Vendor</h3>
+                <div class="">
+                    <a href="#" class="btn btn-dark">New Vendor</a>
+                </div>
             </div>
             <div class="card-body border-bottom py-3">
                 <div class="d-flex">

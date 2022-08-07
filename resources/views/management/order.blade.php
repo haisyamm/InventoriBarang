@@ -6,7 +6,7 @@
             <div class="card-header d-flex justify-content-between">
                 <h3 class="card-title">Order</h3>
                 <div class="">
-                    <a href="{{ route('order.create') }}" class="btn btn-dark">Create Order</a>
+                    <a href="{{ route('order.create') }}" class="btn btn-dark">New Order</a>
                 </div>
             </div>
             <div class="card-body border-bottom py-3">
@@ -44,20 +44,13 @@
                             <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
                             <td>{{ Carbon\Carbon::make($val->created_at)->format('d M Y') }}</td>
                             <td>{{ $val->vendor->name }}</td>
-                            <td>{{ $val->total }}</td>
+                            <td>{{ App\Models\GlobalModel::currency_format($val->total) }}</td>
                             <td>{{ $val->status }}</td>
                             <td class="text-end">
-                                <span class="dropdown">
-                                    <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-                                    <div class="dropdown-menu dropdown-menu-start">
-                                        <a class="dropdown-item" href="#">
-                                            Action
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            Another action
-                                        </a>
-                                    </div>
-                                </span>
+                                @if(Auth::user()->role_code == 1)
+                                <span class="cursor-pointer btn btn-danger">Reject</span>
+                                <span class="cursor-pointer btn btn-success">Approve</span>
+                                @endif
                             </td>
                         </tr>
                         @endforeach

@@ -22,6 +22,7 @@
 
 <body class="layout-fluid theme-light">
     <div class="page">
+        @if(!isset($asside))
         <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
@@ -34,6 +35,7 @@
                 </h1>
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="navbar-nav pt-lg-3">
+                        @if(Auth::user()->role_code == 1)
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -61,6 +63,8 @@
                                 </a>
                             </div>
                         </li>
+                        @endif
+                        @if(Auth::user()->role_code != 3)
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -87,6 +91,7 @@
                                 </a>
                             </div>
                         </li>
+                        @endif
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('inventory') }}">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -104,6 +109,7 @@
                                 </span>
                             </a>
                         </li>
+                        @if(Auth::user()->role_code != 1)
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -136,32 +142,19 @@
                                 </a>
                             </div>
                         </li>
+                        @endif
                     </ul>
                 </div>
             </div>
         </aside>
+        @endif
         <header class="navbar navbar-expand-md navbar-light d-none d-lg-flex d-print-none">
             <div class="container-xl">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-nav flex-row order-md-last ms-auto">
+                <div class="navbar-nav flex-row order-md-last">
                     <div class="d-none d-md-flex">
-                        <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Enable dark mode">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
-                            </svg>
-                        </a>
-                        <a href="?theme=light" class="nav-link px-0 hide-theme-light" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Enable light mode">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <circle cx="12" cy="12" r="4"></circle>
-                                <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
-                            </svg>
-                        </a>
                         <div class="nav-item dropdown d-none d-md-flex me-3">
                             <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
                                 <!-- Download SVG icon from http://tabler-icons.io/i/bell -->
@@ -182,70 +175,7 @@
                                             <div class="row align-items-center">
                                                 <div class="col-auto"><span class="status-dot status-dot-animated bg-red d-block"></span></div>
                                                 <div class="col text-truncate">
-                                                    <a href="#" class="text-body d-block">Example 1</a>
-                                                    <div class="d-block text-muted text-truncate mt-n1">
-                                                        Change deprecated html tags to text decoration classes (#29604)
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <a href="#" class="list-group-item-actions">
-                                                        <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="row align-items-center">
-                                                <div class="col-auto"><span class="status-dot d-block"></span></div>
-                                                <div class="col text-truncate">
-                                                    <a href="#" class="text-body d-block">Example 2</a>
-                                                    <div class="d-block text-muted text-truncate mt-n1">
-                                                        justify-content:between ⇒ justify-content:space-between (#29734)
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <a href="#" class="list-group-item-actions show">
-                                                        <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-yellow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="row align-items-center">
-                                                <div class="col-auto"><span class="status-dot d-block"></span></div>
-                                                <div class="col text-truncate">
-                                                    <a href="#" class="text-body d-block">Example 3</a>
-                                                    <div class="d-block text-muted text-truncate mt-n1">
-                                                        Update change-version.js (#29736)
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <a href="#" class="list-group-item-actions">
-                                                        <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="row align-items-center">
-                                                <div class="col-auto"><span class="status-dot status-dot-animated bg-green d-block"></span></div>
-                                                <div class="col text-truncate">
-                                                    <a href="#" class="text-body d-block">Example 4</a>
-                                                    <div class="d-block text-muted text-truncate mt-n1">
-                                                        Regenerate package-lock.json (#29730)
-                                                    </div>
+                                                    <a href="#" class="text-body d-block">Notification</a>
                                                 </div>
                                                 <div class="col-auto">
                                                     <a href="#" class="list-group-item-actions">
@@ -277,9 +207,24 @@
                             <a href="#" class="dropdown-item">Feedback</a>
                             <div class="dropdown-divider"></div>
                             <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Logout</a>
+                            <a href="#" class="dropdown-item" onclick="logout_app()">Logout</a>
                         </div>
                     </div>
+                </div>
+                <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first">
+                    @if(isset($back))
+                    <a href="{{ $back_url }}" class="text-dark strong h3 text-decoration-none">
+                        <span class="me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <line x1="5" y1="12" x2="9" y2="16"></line>
+                                <line x1="5" y1="12" x2="9" y2="8"></line>
+                            </svg>
+                        </span>
+                        {{ $back }}
+                    </a>
+                    @endif
                 </div>
             </div>
         </header>
@@ -328,6 +273,7 @@
             </footer>
         </div>
     </div>
+    <x-modal.logout />
     <!-- Libs JS -->
     <script src="{{ asset('assets/dist/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/dist/libs/jsvectormap/dist/js/jsvectormap.min.js') }}"></script>
