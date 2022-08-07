@@ -19,8 +19,8 @@ class CreateProduct extends Migration
             $table->string('name');
             $table->string('brand');
             $table->string('uom');
-            $table->string('purchase_price');
-            $table->string('selling_price');
+            $table->float('purchase_price');
+            $table->float('selling_price');
             $table->timestamps();
         });
     }

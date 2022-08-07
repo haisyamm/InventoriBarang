@@ -14,12 +14,12 @@ class RolesSeeder extends Seeder
      */
     public function run()
     {
-        $this->buildRole('1', 'Admin');
-        $this->buildRole('2', 'Regional');
-        $this->buildRole('3', 'Outlet');
+        $this->build('1', 'Admin');
+        $this->build('2', 'Regional');
+        $this->build('3', 'Outlet');
     }
 
-    public function buildRole($code, $name)
+    public function build($code, $name)
     {
         RolesModel::create([
             'role_code' => $code,
