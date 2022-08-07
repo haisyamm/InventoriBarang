@@ -44,16 +44,30 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($product as $val)
                         <tr>
                             <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{ $val->code }}</td>
+                            <td>{{ $val->name }}</td>
+                            <td>{{ $val->brand }}</td>
+                            <td>{{ $val->uom }}</td>
+                            <td>{{ $val->purchase_price }}</td>
+                            <td>{{ $val->selling_price }}</td>
+                            <td class="text-end">
+                                <span class="dropdown">
+                                    <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">
+                                            Action
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            Another action
+                                        </a>
+                                    </div>
+                                </span>
+                            </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
