@@ -30,11 +30,48 @@
                 </button>
                 <h1 class="navbar-brand navbar-brand-autodark">
                     <a href=".">
-                        <h2>Inventori Admin</h2>
+                        <h2>Asset ALFA</h2>
                     </a>
                 </h1>
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="navbar-nav pt-lg-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" >
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/file-text -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-desktop-analytics" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <rect x="3" y="4" width="18" height="12" rx="1"></rect>
+                                    <path d="M7 20h10"></path>
+                                    <path d="M9 16v4"></path>
+                                    <path d="M15 16v4"></path>
+                                    <path d="M9 12v-4"></path>
+                                    <path d="M12 12v-1"></path>
+                                    <path d="M15 12v-2"></path>
+                                    <path d="M12 12v-1"></path>
+                                    </svg>
+                                </span>
+                                <span class="nav-link-title">
+                                    Dashboard
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" >
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/file-text -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                    <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path>
+                                    </svg>
+                                </span>
+                                <span class="nav-link-title">
+                                    My Asset
+                                </span>
+                            </a>
+                        </li>
                         @if(Auth::user()->role_code != 3)
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
@@ -55,16 +92,22 @@
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{ route('assets_management.order') }}">
-                                    Order
+                                    All
                                 </a>
                                 <a class="dropdown-item" href="{{ route('assets_management.release') }}">
-                                    Release
+                                    Waiting Approval
+                                </a>
+                                <a class="dropdown-item" href="{{ route('assets_management.release') }}">
+                                    Accept
+                                </a>
+                                <a class="dropdown-item" href="{{ route('assets_management.release') }}">
+                                    Reject
                                 </a>
                             </div>
                         </li>
                         @endif
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('inventory') }}">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-3d" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -76,9 +119,20 @@
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
-                                    Inventory
+                                    Maintenance
                                 </span>
                             </a>
+                            <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{{ route('master.assets') }}">
+                                        Period
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('master.regional') }}">
+                                        Repair & Replacement
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('master.vendor') }}">
+                                        New Store
+                                    </a>
+                            </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
@@ -126,18 +180,21 @@
                                     Setup
                                 </span>
                             </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('master.assets') }}">
-                                    Assets
+                            <div class="dropdown-menu">                                
+                                <a class="dropdown-item" href="{{ route('master.outlet') }}">
+                                    Store
                                 </a>
                                 <a class="dropdown-item" href="{{ route('master.regional') }}">
                                     Regional
                                 </a>
                                 <a class="dropdown-item" href="{{ route('master.vendor') }}">
-                                    Vendor
+                                    Company
                                 </a>
-                                <a class="dropdown-item" href="{{ route('master.outlet') }}">
-                                    Outlet
+                                <a class="dropdown-item" href="{{ route('master.vendor') }}">
+                                    Department
+                                </a>
+                                <a class="dropdown-item" href="{{ route('master.vendor') }}">
+                                    Vendor
                                 </a>
                             </div>
                         </li>
