@@ -35,35 +35,6 @@
                 </h1>
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="navbar-nav pt-lg-3">
-                        @if(Auth::user()->role_code == 1)
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
-                                <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-activity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M3 12h4l3 8l4 -16l3 8h4"></path>
-                                    </svg>
-                                </span>
-                                <span class="nav-link-title">
-                                    Master Data
-                                </span>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('master.assets') }}">
-                                    Assets
-                                </a>
-                                <a class="dropdown-item" href="{{ route('master.regional') }}">
-                                    Regional
-                                </a>
-                                <a class="dropdown-item" href="{{ route('master.vendor') }}">
-                                    Vendor
-                                </a>
-                                <a class="dropdown-item" href="{{ route('master.outlet') }}">
-                                    Outlet
-                                </a>
-                            </div>
-                        </li>
-                        @endif
                         @if(Auth::user()->role_code != 3)
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
@@ -109,7 +80,6 @@
                                 </span>
                             </a>
                         </li>
-                        @if(Auth::user()->role_code != 1)
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -139,6 +109,35 @@
                                 </a>
                                 <a class="dropdown-item" href="./layout-boxed.html">
                                     Inventori Order & Release
+                                </a>
+                            </div>
+                        </li>
+                        @if(Auth::user()->role_code == 1)
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                </span>
+                                <span class="nav-link-title">
+                                    Setup
+                                </span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{ route('master.assets') }}">
+                                    Assets
+                                </a>
+                                <a class="dropdown-item" href="{{ route('master.regional') }}">
+                                    Regional
+                                </a>
+                                <a class="dropdown-item" href="{{ route('master.vendor') }}">
+                                    Vendor
+                                </a>
+                                <a class="dropdown-item" href="{{ route('master.outlet') }}">
+                                    Outlet
                                 </a>
                             </div>
                         </li>
