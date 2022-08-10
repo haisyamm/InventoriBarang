@@ -13,7 +13,7 @@ class CreateMaintenancePeriod extends Migration
      */
     public function up()
     {
-        Schema::create('maintenance_period', function (Blueprint $table) {
+        Schema::create('maintenance_periods', function (Blueprint $table) {
             $table->id();
             $table->string('vendor_code');
             $table->string('product_code');
@@ -33,6 +33,6 @@ class CreateMaintenancePeriod extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('maintenance_period');
+        Schema::dropIfExists('maintenance_periods');
     }
 }
