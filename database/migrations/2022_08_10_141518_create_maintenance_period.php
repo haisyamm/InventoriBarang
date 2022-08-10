@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateMaintenancePeriod extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('maintenance_period', function (Blueprint $table) {
+            $table->id();
+            $table->string('vendor_code');
+            $table->string('product_code');
+            $table->string('service_name');
+            $table->date('service_date');
+            $table->string('purchase_order');
+            $table->date('purchase_date');
+            $table->string('attachment');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('maintenance_period');
+    }
+}
