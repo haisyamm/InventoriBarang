@@ -21,11 +21,11 @@
                     <div class="row" style="margin-top: 25px;">
                         <div class="col-md-4 form-group mb-3">
                             <label for="Delivery Order Number" class="small fw-bolder text-uppercase">Delivery Order Number</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Delibery Order Number">
+                            <input type="text" name="delivery_order_number" id="delivery_order_number" class="form-control mt-1" placeholder="Enter Delibery Order Number">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Delivery Order Date" class="small fw-bolder text-uppercase">Delivery Order Date</label>
-                            <input type="date" name="" id="" class="form-control mt-1" placeholder="Select Order Date">
+                            <input type="date" name="delivery_order_date" id="delivery_order_date" class="form-control mt-1" placeholder="Select Order Date">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Company" class="small fw-bolder text-uppercase">Company</label>
@@ -68,7 +68,7 @@
                     <div class="row" style="margin-top: 25px;">
                         <div class="col-md-4 form-group mb-3">
                             <label for="Asset Status" class="small fw-bolder text-uppercase">Asset Status</label>
-                            <select name="" id="" class="form-control mt-1">
+                            <select name="asset_status" id="asset_status" class="form-control mt-1">
                                 <option value="" selected disabled>Choose Asset Status</option>
                                 <option value="Broken">Broken</option>
                                 <option value="Lost">Lost</option>
@@ -76,19 +76,19 @@
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Asset Name" class="small fw-bolder text-uppercase">Asset Name</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Asset Name">
+                            <input type="text" name="asset_name" id="asset_name" class="form-control mt-1" placeholder="Enter Asset Name">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Asset Description" class="small fw-bolder text-uppercase">Asset Description</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Asset Description">
+                            <input type="text" name="asset_description" id="asset_description" class="form-control mt-1" placeholder="Enter Asset Description">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Category" class="small fw-bolder text-uppercase">Category</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Category">
+                            <input type="text" name="asset_category" id="asset_category" class="form-control mt-1" placeholder="Enter Category">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Type" class="small fw-bolder text-uppercase">Type</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Type">
+                            <input type="text" name="asset_type" id="asset_type" class="form-control mt-1" placeholder="Enter Type">
                         </div>
                     </div>
                 </div>
@@ -104,15 +104,15 @@
                     <div class="row" style="margin-top: 25px;">
                         <div class="col-md-4 form-group mb-3">
                             <label for="Warranty Description" class="small fw-bolder text-uppercase">Warranty Description</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Warranty Description">
+                            <input type="text" name="warranty_description" id="warranty_description" class="form-control mt-1" placeholder="Enter Warranty Description">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Warranty Exp Date" class="small fw-bolder text-uppercase">Warranty Exp Date</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Exp Date">
+                            <input type="date" name="warranty_exp_date" id="warranty_exp_date" class="form-control mt-1" placeholder="Enter Exp Date">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Warranty Period" class="small fw-bolder text-uppercase">Warranty Period</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Warranty Period">
+                            <input type="date" name="warranty_period" id="warranty_period" class="form-control mt-1" placeholder="Enter Warranty Period">
                         </div>
                     </div>
                 </div>
@@ -210,17 +210,78 @@
                     <div class="row" style="margin-top: 25px;">
                         <div class="col-md-4 form-group mb-3">
                             <label for="Order Status" class="small fw-bolder text-uppercase">Order Status</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Order Status">
+                            <input type="text" name="order_status" id="order_status" class="form-control mt-1" placeholder="Enter Order Status">
                         </div>
                     </div>
                 </div>
                 <hr>
                 <div class="d-flex justify-content-end">
                     <button class="btn btn-light">Cancel</button>
-                    <button class="btn btn-dark ms-3">Add</button>
+                    <button class="btn btn-dark ms-3" onclick="onCreateAsset()">Add</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+@push('script')
+<script>
+    // On Button add clicked
+    const onCreateAsset = () => {
+        var dataBatch = getFormInput();
+        requestServer({
+            url: '/master/assets/store',
+            data: dataBatch,
+            onSuccess: function(response) {
+                console.log(response);
+            }
+        });
+    }
+
+    // Get input in form
+    const getFormInput = () => {
+        // Delivery
+        let delivery_order_number = $('#delivery_order_number').val();
+        let delivery_order_date = $('#delivery_order_date').val();
+        let company = $('#company').val();
+        let department = $('#department').val();
+        let vendor = $('#vendor').val();
+
+        // Asset Detail
+        let asset_status = $('#asset_status').val();
+        let asset_name = $('#asset_name').val();
+        let asset_description = $('#asset_description').val();
+        let category = $('#asset_category').val();
+        let type = $('#asset_type').val();
+
+        // Warranty
+        let warranty_description = $('#warranty_description').val();
+        let warranty_exp_date = $('#warranty_exp_date').val();
+        let warranty_period = $('#warranty_period').val();
+
+        // Asset Files Ongoing
+
+        // Order Status
+        let order_status = $('#order_status').val();
+
+        let dataBatch = {
+            delivery_order_number: delivery_order_number,
+            delivery_order_date: delivery_order_date,
+            delivery_company_id: company,
+            delivery_department_id: department,
+            delivery_vendor_id: vendor,
+            asset_status: asset_status,
+            asset_name: asset_name,
+            asset_description: asset_description,
+            asset_category: category,
+            asset_type: type,
+            warranty_description: warranty_description,
+            warranty_exp_date: warranty_exp_date,
+            warranty_period: warranty_period,
+            order_status: order_status,
+        };
+
+        return dataBatch;
+    }
+</script>
+@endpush

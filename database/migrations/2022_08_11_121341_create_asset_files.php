@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAssets extends Migration
+class CreateAssetFiles extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,12 @@ class CreateAssets extends Migration
      */
     public function up()
     {
-        Schema::create('assets', function (Blueprint $table) {
+        Schema::create('asset_files', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
-            $table->bigInteger('warranty_id');
-            $table->string('delivery_order_number');
+            $table->bigInteger('asset_id');
             $table->string('name');
-            $table->string('description');
-            $table->string('category');
             $table->string('type');
-            $table->string('status');
+            $table->string('path');
             $table->timestamps();
         });
     }
@@ -34,6 +30,6 @@ class CreateAssets extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('assets');
+        Schema::dropIfExists('asset_files');
     }
 }

@@ -171,6 +171,7 @@ const requestServer = ({ url = '', type = 'post', data = [], onLoader = true, on
             }
         },
         success: function (data) {
+            close_swal();
             onSuccess(data);
         },
         error: function (error) {
