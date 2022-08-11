@@ -1,4 +1,4 @@
-@extends('layouts.app_template', ['asside' => false, 'back' => 'Order', 'back_url' => route('assets_management.order')])
+@extends('layouts.app_template')
 @section('content')
 <div class="row">
     <div class="col-md-4">

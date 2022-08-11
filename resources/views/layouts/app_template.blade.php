@@ -23,7 +23,7 @@
 <body class="layout-fluid theme-light">
     <div class="page">
         @if(!isset($asside))
-        <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark">
+        <aside class="navbar navbar-vertical navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
                     <span class="navbar-toggler-icon"></span>
@@ -36,19 +36,19 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="navbar-nav pt-lg-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" >
+                            <a class="nav-link" href="#">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                     <!-- Download SVG icon from http://tabler-icons.io/i/file-text -->
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-desktop-analytics" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <rect x="3" y="4" width="18" height="12" rx="1"></rect>
-                                    <path d="M7 20h10"></path>
-                                    <path d="M9 16v4"></path>
-                                    <path d="M15 16v4"></path>
-                                    <path d="M9 12v-4"></path>
-                                    <path d="M12 12v-1"></path>
-                                    <path d="M15 12v-2"></path>
-                                    <path d="M12 12v-1"></path>
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <rect x="3" y="4" width="18" height="12" rx="1"></rect>
+                                        <path d="M7 20h10"></path>
+                                        <path d="M9 16v4"></path>
+                                        <path d="M15 16v4"></path>
+                                        <path d="M9 12v-4"></path>
+                                        <path d="M12 12v-1"></path>
+                                        <path d="M15 12v-2"></path>
+                                        <path d="M12 12v-1"></path>
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
@@ -57,14 +57,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" >
+                            <a class="nav-link" href="#">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                     <!-- Download SVG icon from http://tabler-icons.io/i/file-text -->
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <circle cx="12" cy="12" r="9"></circle>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                    <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path>
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <circle cx="12" cy="12" r="9"></circle>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path>
                                     </svg>
                                 </span>
                                 <span class="nav-link-title">
@@ -107,7 +107,7 @@
                         </li>
                         @endif
                         <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+                            <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-3d" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -123,15 +123,15 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{ route('master.assets') }}">
-                                        Period
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('master.regional') }}">
-                                        Repair & Replacement
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('master.vendor') }}">
-                                        New Store
-                                    </a>
+                                <a class="dropdown-item" href="{{ route('master.assets') }}">
+                                    Period
+                                </a>
+                                <a class="dropdown-item" href="{{ route('master.regional') }}">
+                                    Repair & Replacement
+                                </a>
+                                <a class="dropdown-item" href="{{ route('master.vendor') }}">
+                                    New Store
+                                </a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -170,17 +170,17 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
-                                <circle cx="12" cy="12" r="3"></circle>
-                                </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
                                 </span>
                                 <span class="nav-link-title">
                                     Setup
                                 </span>
                             </a>
-                            <div class="dropdown-menu">                                
+                            <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{ route('master.outlet') }}">
                                     Store
                                 </a>
@@ -226,6 +226,19 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item px-4">
+                        <a href="{{ route('master.assets.create') }}" class="btn btn-dark">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <line x1="9" y1="12" x2="15" y2="12"></line>
+                                    <line x1="12" y1="9" x2="12" y2="15"></line>
+                                </svg>
+                            </span>
+                            Add Assets
+                        </a>
+                    </div>
                     <div class="d-none d-md-flex">
                         <div class="nav-item dropdown d-none d-md-flex me-3">
                             <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
@@ -302,9 +315,9 @@
         </header>
         <div class="page-wrapper">
             <div class="page-body">
-                <div class="container-xl">
-                    @yield('content')
-                </div>
+                <!-- <div class="container-xl"> -->
+                @yield('content')
+                <!-- </div> -->
             </div>
             <footer class="footer footer-transparent d-print-none">
                 <div class="container-xl">

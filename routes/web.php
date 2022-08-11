@@ -29,6 +29,7 @@ Route::group(['middleware' => 'auth'], function () {
     // Start Master ============================
     // Assets
     Route::get('/master/assets', [App\Http\Controllers\Master\AssetsController::class, 'index'])->name('master.assets');
+    Route::get('/master/assets/create', [App\Http\Controllers\Master\AssetsController::class, 'create'])->name('master.assets.create');
     // Regional
     Route::get('/master/regional', [App\Http\Controllers\Master\RegionalController::class, 'index'])->name('master.regional');
     // Vendor

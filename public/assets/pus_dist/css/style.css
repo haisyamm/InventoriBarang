@@ -28,6 +28,11 @@
     border: 2px solid #474747;
 }
 
+.nav-link-title {
+    color: #474747;
+    font-weight: 500;
+}
+
 .overflow-height {
     max-height: 80vh;
     overflow-y: auto;

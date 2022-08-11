@@ -14,4 +14,9 @@ class AssetsController extends Controller
 
         return view('master.assets', $data);
     }
+
+    public function create()
+    {
+        return view('master.assets_form.create');
+    }
 }
