@@ -30,7 +30,7 @@
                 </button>
                 <h1 class="navbar-brand navbar-brand-autodark">
                     <a href=".">
-                        <h2>Asset ALFA</h2>
+                        <h2 class="fw-bold">Asset ALFA</h2>
                     </a>
                 </h1>
                 <div class="collapse navbar-collapse" id="navbar-menu">
