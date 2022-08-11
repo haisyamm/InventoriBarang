@@ -19,7 +19,9 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             RegionalSeeder::class,
             VendorSeeder::class,
-            OutletSeeder::class
+            OutletSeeder::class,
+            CompanySeeder::class,
+            DepartmentSeeder::class
         ]);
     }
 }
