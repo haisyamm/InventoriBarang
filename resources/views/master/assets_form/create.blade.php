@@ -57,11 +57,11 @@
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Asset Name" class="small fw-bolder text-uppercase">Asset Name</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Assets Name">
+                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Asset Name">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Asset Deskription" class="small fw-bolder text-uppercase">Asset Deskription</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Assets Deskription">
+                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Asset Deskription">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Category" class="small fw-bolder text-uppercase">Category</label>
