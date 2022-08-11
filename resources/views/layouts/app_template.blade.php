@@ -123,7 +123,7 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('master.assets') }}">
+                                <a class="dropdown-item" href="{{ route('maintenanceperiod') }}">
                                     Period
                                 </a>
                                 <a class="dropdown-item" href="{{ route('master.regional') }}">

@@ -6,7 +6,7 @@
             <div class="card-header d-flex justify-content-between">
                 <h3 class="card-title">Maintenance</h3>
                 <div class="">
-                    <a href="{{ route('release.create') }}" class="btn btn-dark">Add Maintenance</a>
+                    <a href="{{ route('maintenanceperiod.create') }}" class="btn btn-dark">Add Maintenance</a>
                 </div>
             </div>
             <div class="card-body border-bottom py-3">
@@ -25,36 +25,36 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="table-responsive">
-                <table class="table card-table table-vcenter text-nowrap datatable">
-                    <thead>
-                        <tr>
-                            <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices"></th>
-                            <th>Service Name</th>
-                            <th>Service Date</th>
-                            <th>Asset Name</th>
-                            <th>Purchase Order</th>
-                            <th>Purchase Date</th>
-                            <th>Vendor</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($period as $val)
-                        <tr>
-                            <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
-                            <td>{{ $val->service_name }}</td>
-                            <td>{{ $val->service_date }}</td>
-                            <td>{{ $val->asset->name }}</td>
-                            <td>{{ $val->purchase_order }}</td>
-                            <td>{{ $val->purchase_date }}</td>
-                            <td>{{ $val->vendor->name }}</td>
-                            <td></td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                <div class="table-responsive border mt-2">
+                    <table class="table card-table table-vcenter text-nowrap datatable">
+                        <thead>
+                            <tr>
+                                <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices"></th>
+                                <th>Service Name</th>
+                                <th>Service Date</th>
+                                <th>Asset Name</th>
+                                <th>Purchase Order</th>
+                                <th>Purchase Date</th>
+                                <th>Vendor</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($period as $val)
+                            <tr>
+                                <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
+                                <td>{{ $val->service_name }}</td>
+                                <td>{{ $val->service_date }}</td>
+                                <td>{{ $val->asset->name }}</td>
+                                <td>{{ $val->purchase_order }}</td>
+                                <td>{{ $val->purchase_date }}</td>
+                                <td>{{ $val->vendor->name }}</td>
+                                <td></td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="card-footer d-flex align-items-center">
                 <p class="m-0 text-muted">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>
