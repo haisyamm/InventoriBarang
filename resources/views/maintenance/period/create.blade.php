@@ -8,7 +8,7 @@
     </div>
     <div class="col-md-12">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body py-4 px-4">
                 <div class="h3 fw-bolder text-uppercase">
                     <svg xmlns="http://www.w3.org/2000/svg" class="me-1 mb-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -61,13 +61,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="h3 fw-bolder mt-4 text-uppercase">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="me-1 mb-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <circle cx="12" cy="12" r="1"></circle>
-                        <circle cx="12" cy="12" r="9"></circle>
-                    </svg>
-                    Maintenance
+                <div class="d-flex justify-content-between mt-4">
+                    <div class="h3 fw-bolder text-uppercase">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="me-1 mb-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <circle cx="12" cy="12" r="9"></circle>
+                        </svg>
+                        Task
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-icon border-dashed bg-dark-lt">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <line x1="9" y1="12" x2="15" y2="12"></line>
+                                <line x1="12" y1="9" x2="12" y2="15"></line>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="table-responsive border mt-1" style="height: 200px; overflow-y: auto;">
                     <table class="table card-table table-vcenter text-nowrap datatable">
@@ -85,31 +97,34 @@
                             @foreach($product as $val)
                             <tr>
                                 <td>
-                                    <span class="text-red">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <span class="text-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <line x1="4" y1="7" x2="20" y2="7"></line>
-                                            <line x1="10" y1="11" x2="10" y2="17"></line>
-                                            <line x1="14" y1="11" x2="14" y2="17"></line>
-                                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
-                                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                                            <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
+                                            <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
+                                            <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
+                                            <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
+                                            <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
+                                            <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
+                                            <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
+                                            <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
                                         </svg>
                                     </span>
                                 </td>
-                                <td>{{ $val->code }}</td>
-                                <td>{{ $val->name }}</td>
-                                <td>
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <span class="border p-2">+</span>
-                                        <h4 class="my-0 mx-3">5</h4>
-                                        <span class="border p-2">-</span>
-                                    </div>
-                                </td>
-                                <td class="text-end">{{ App\Models\GlobalModel::currency_format($val->purchase_price) }}</td>
+                                <td>Task Maintenance</td>
+                                <td>2 Sec</td>
+                                <td class="text-center">11-Aug-2022</td>
+                                <td class="text-center">Notes Description</td>
+                                <td class="text-end">Running</td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-light">Cancel</button>
+                    <button class="btn btn-dark ms-3" onclick="onCreateAsset()">Add</button>
                 </div>
             </div>
         </div>
