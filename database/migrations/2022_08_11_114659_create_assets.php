@@ -23,7 +23,7 @@ class CreateAssets extends Migration
             $table->string('category');
             $table->string('type');
             $table->string('status');
-            $table->string('order_status');
+            $table->string('order_status')->default("REQUEST");;
             $table->timestamps();
         });
     }
