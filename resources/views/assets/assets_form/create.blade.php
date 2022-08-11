@@ -25,19 +25,31 @@
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Delivery Order Date" class="small fw-bolder text-uppercase">Delivery Order Date</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Order Date">
+                            <input type="date" name="" id="" class="form-control mt-1" placeholder="Enter Order Date">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Company" class="small fw-bolder text-uppercase">Company</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Company">
+                            <select name="company" id="company" class="form-control mt-1">
+                                @foreach($company as $val)
+                                <option value="{{ $val->id }}">{{ $val->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Department" class="small fw-bolder text-uppercase">Department</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Department">
+                            <select name="department" id="department" class="form-control mt-1">
+                                @foreach($department as $val)
+                                <option value="{{ $val->id }}">{{ $val->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Vendor" class="small fw-bolder text-uppercase">Vendor</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Vendor">
+                            <select name="vendor" id="vendor" class="form-control mt-1">
+                                @foreach($vendor as $val)
+                                <option value="{{ $val->id }}">{{ $val->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                 </div>
