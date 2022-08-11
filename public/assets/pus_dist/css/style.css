@@ -12,6 +12,10 @@
     bottom: -15px;
 }
 
+.border-dashed {
+    border: 1px dashed #474747;
+}
+
 .hover-shadow-primary:hover {
     cursor: pointer;
     box-shadow: rgba(35, 40, 87, 0.075) 0px 48px 100px 0px !important;

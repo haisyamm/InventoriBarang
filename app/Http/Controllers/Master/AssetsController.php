@@ -24,7 +24,7 @@ class AssetsController extends Controller
 
     public function my_assets()
     {
-        $data['product'] = ProductModel::all();
+        $data['assets'] = AssetsModel::where(['user_id' => Auth::user()->id])->get();
         return view('assets.my_assets', $data);
     }
 
