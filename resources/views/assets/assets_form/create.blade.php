@@ -68,15 +68,19 @@
                     <div class="row" style="margin-top: 25px;">
                         <div class="col-md-4 form-group mb-3">
                             <label for="Asset Status" class="small fw-bolder text-uppercase">Asset Status</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
+                            <select name="" id="" class="form-control mt-1">
+                                <option value="" selected disabled>Choose Asset Status</option>
+                                <option value="Broken">Broken</option>
+                                <option value="Lost">Lost</option>
+                            </select>
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Asset Name" class="small fw-bolder text-uppercase">Asset Name</label>
                             <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Asset Name">
                         </div>
                         <div class="col-md-4 form-group mb-3">
-                            <label for="Asset Deskription" class="small fw-bolder text-uppercase">Asset Deskription</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Asset Deskription">
+                            <label for="Asset Description" class="small fw-bolder text-uppercase">Asset Description</label>
+                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Asset Description">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Category" class="small fw-bolder text-uppercase">Category</label>
