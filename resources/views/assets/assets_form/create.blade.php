@@ -21,7 +21,7 @@
                     <div class="row" style="margin-top: 25px;">
                         <div class="col-md-4 form-group mb-3">
                             <label for="Delivery Order Number" class="small fw-bolder text-uppercase">Delivery Order Number</label>
-                            <input type="text" name="delivery_order_number" id="delivery_order_number" class="form-control mt-1" placeholder="Enter Delibery Order Number">
+                            <input type="text" name="delivery_order_number" id="delivery_order_number" class="form-control mt-1" placeholder="Enter Delivery Order Number">
                         </div>
                         <div class="col-md-4 form-group mb-3">
                             <label for="Delivery Order Date" class="small fw-bolder text-uppercase">Delivery Order Date</label>
@@ -70,6 +70,7 @@
                             <label for="Asset Status" class="small fw-bolder text-uppercase">Asset Status</label>
                             <select name="asset_status" id="asset_status" class="form-control mt-1">
                                 <option value="" selected disabled>Choose Asset Status</option>
+                                <option value="Operational">Operational</option>
                                 <option value="Broken">Broken</option>
                                 <option value="Lost">Lost</option>
                             </select>
@@ -89,6 +90,15 @@
                         <div class="col-md-4 form-group mb-3">
                             <label for="Type" class="small fw-bolder text-uppercase">Type</label>
                             <input type="text" name="asset_type" id="asset_type" class="form-control mt-1" placeholder="Enter Type">
+                        </div>
+                        <div class="col-md-4 form-group mb-3">
+                            <label for="Type" class="small fw-bolder text-uppercase">Assign User</label>
+                            <select name="user_id" id="user_id" class="form-control mt-1">
+                                <option value="" selected disabled>Choose User</option>
+                                @foreach($user as $val)
+                                <option value="{{ $val->id }}">{{ $val->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -210,7 +220,12 @@
                     <div class="row" style="margin-top: 25px;">
                         <div class="col-md-4 form-group mb-3">
                             <label for="Order Status" class="small fw-bolder text-uppercase">Order Status</label>
-                            <input type="text" name="order_status" id="order_status" class="form-control mt-1" placeholder="Enter Order Status">
+                            <select name="asset_status" id="asset_status" class="form-control mt-1" disabled>
+                                <option value="Request" selected>Request</option>
+                                <option value="Waiting Approval">Waiting Approval</option>
+                                <option value="Accept">Accept</option>
+                                <option value="Reject">Reject</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -253,6 +268,7 @@
         let asset_description = $('#asset_description').val();
         let category = $('#asset_category').val();
         let type = $('#asset_type').val();
+        let user_id = $('#user_id').val();
 
         // Warranty
         let warranty_description = $('#warranty_description').val();
@@ -275,6 +291,7 @@
             asset_description: asset_description,
             asset_category: category,
             asset_type: type,
+            user_id: user_id,
             warranty_description: warranty_description,
             warranty_exp_date: warranty_exp_date,
             warranty_period: warranty_period,
