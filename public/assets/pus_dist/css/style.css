@@ -102,6 +102,12 @@
     border-radius: 5px;
 }
 
+.upload-file-box {
+    border: 1px dashed #474747;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 /* Margin */
 @media only screen and (min-width: 320px) and (max-width: 425px) {
     .mt-cstm-3 {
