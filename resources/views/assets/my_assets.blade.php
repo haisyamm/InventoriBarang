@@ -4,7 +4,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header d-flex justify-content-between">
-                <h3 class="card-title">Assets</h3>
+                <h3 class="card-title">My Assets</h3>
                 <div class="">
                     <a href="#" class="btn btn-dark">Action</a>
                 </div>

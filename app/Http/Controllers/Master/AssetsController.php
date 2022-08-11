@@ -12,11 +12,17 @@ class AssetsController extends Controller
     {
         $data['product'] = ProductModel::all();
 
-        return view('master.assets', $data);
+        return view('assets.assets', $data);
+    }
+
+    public function my_assets()
+    {
+        $data['product'] = ProductModel::all();
+        return view('assets.my_assets', $data);
     }
 
     public function create()
     {
-        return view('master.assets_form.create');
+        return view('assets.assets_form.create');
     }
 }

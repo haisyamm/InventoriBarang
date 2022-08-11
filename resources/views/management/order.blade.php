@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table-responsive border">
+                <div class="table-responsive border mt-2">
                     <table class="table card-table table-vcenter text-nowrap datatable">
                         <thead>
                             <tr>

@@ -169,6 +169,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="h3 fw-bolder mt-4 text-uppercase">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="me-1 mb-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <circle cx="12" cy="12" r="9"></circle>
+                    </svg>
+                    Order Status
+                </div>
+                <div class="ps-1">
+                    <div class="row" style="margin-top: 25px;">
+                        <div class="col-md-4 form-group mb-3">
+                            <label for="Order Status" class="small fw-bolder text-uppercase">Order Status</label>
+                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Order Status">
+                        </div>
+                    </div>
+                </div>
                 <hr>
                 <div class="d-flex justify-content-end">
                     <button class="btn btn-light">Cancel</button>

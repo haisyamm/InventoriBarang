@@ -4,9 +4,9 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header d-flex justify-content-between">
-                <h3 class="card-title">Release</h3>
+                <h3 class="card-title">Asset Management</h3>
                 <div class="">
-                    <a href="{{ route('release.create') }}" class="btn btn-dark">New Release</a>
+                    <a href="#" class="btn btn-dark">Action</a>
                 </div>
             </div>
             <div class="card-body border-bottom py-3">
@@ -30,26 +30,45 @@
                         <thead>
                             <tr>
                                 <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices"></th>
-                                <th>Release Date</th>
-                                <th>Vendor</th>
-                                <th>Total</th>
-                                <th>Status</th>
+                                <th class="w-1">Code Item
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/chevron-up -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-sm text-dark icon-thick" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <polyline points="6 15 12 9 18 15"></polyline>
+                                    </svg>
+                                </th>
+                                <th>Name Item</th>
+                                <th>Brand</th>
+                                <th>Uom</th>
+                                <th>Purchase Price</th>
+                                <th>Selling Price</th>
+                                <th>Stock</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($release as $val)
+                            @foreach($product as $val)
                             <tr>
                                 <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
-                                <td>{{ Carbon\Carbon::make($val->created_at)->format('d M Y') }}</td>
-                                <td>{{ $val->vendor->name }}</td>
-                                <td>{{ App\Models\GlobalModel::currency_format($val->total) }}</td>
-                                <td>{{ $val->status }}</td>
+                                <td>{{ $val->code }}</td>
+                                <td>{{ $val->name }}</td>
+                                <td>{{ $val->brand }}</td>
+                                <td>{{ $val->uom }}</td>
+                                <td>{{ App\Models\GlobalModel::currency_format($val->purchase_price) }}</td>
+                                <td>{{ App\Models\GlobalModel::currency_format($val->selling_price) }}</td>
+                                <td>{{ $val->stock->stock }}</td>
                                 <td class="text-end">
-                                    @if(Auth::user()->role_code == 1)
-                                    <span class="cursor-pointer btn btn-danger">Reject</span>
-                                    <span class="cursor-pointer btn btn-success">Approve</span>
-                                    @endif
+                                    <span class="dropdown">
+                                        <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item" href="#">
+                                                Action
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                Another action
+                                            </a>
+                                        </div>
+                                    </span>
                                 </td>
                             </tr>
                             @endforeach
