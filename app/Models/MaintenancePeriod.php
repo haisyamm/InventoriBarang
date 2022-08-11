@@ -9,14 +9,15 @@ class MaintenancePeriod extends Model
 {
     use HasFactory;
 
+    protected $table = 'maintenance_periods';
+    protected $fillable = ['vendor_code', 'asset_id', 'service_name', 'service_date', 'purchase_order', 'purchase_date', 'attachment'];
+
     public function asset()
     {
-        return $this->hasOne(ProductModel::class, 'code', 'product_code');
+        return $this->hasOne(AssetsModel::class, 'code', 'asset_id');
     }
     public function vendor()
     {
         return $this->hasOne(VendorModel::class, 'code', 'vendor_code');
     }
 }
-
-

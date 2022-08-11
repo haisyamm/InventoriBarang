@@ -15,7 +15,7 @@ class CreateDetailMaintenancePeriodsTable extends Migration
     {
         Schema::create('detail_maintenance_periods', function (Blueprint $table) {
             $table->id();
-            $table->string('service_id');
+            $table->string('maintenance_period_id');
             $table->string('task_name');
             $table->integer('task_duration');
             $table->date('due_date');

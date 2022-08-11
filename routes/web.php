@@ -48,10 +48,10 @@ Route::group(['middleware' => 'auth'], function () {
     // Release ==============================
     // Inventori ============================
     Route::get('/inventory', [App\Http\Controllers\Inventory\InventoryController::class, 'index'])->name('inventory');
-    // Inventori ============================
-    Route::get('/maintenance/periods', [App\Http\Controllers\MaintenancePeriodController::class, 'index'])->name('maintenanceperiod');
     // Maintenance ============================
+    Route::get('/maintenance/periods', [App\Http\Controllers\MaintenancePeriodController::class, 'index'])->name('maintenanceperiod');
     Route::get('/maintenance/periods/create', [App\Http\Controllers\MaintenancePeriodController::class, 'create'])->name('maintenanceperiod.create');
+    Route::post('/maintenance/periods/store', [App\Http\Controllers\MaintenancePeriodController::class, 'store'])->name('maintenanceperiod.store');
     // Maintenance ============================
 
 });

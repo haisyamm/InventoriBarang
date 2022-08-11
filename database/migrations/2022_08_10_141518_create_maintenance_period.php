@@ -21,7 +21,7 @@ class CreateMaintenancePeriod extends Migration
             $table->date('service_date');
             $table->string('purchase_order');
             $table->date('purchase_date');
-            $table->string('attachment');
+            $table->string('attachment')->nullable();
             $table->timestamps();
         });
     }

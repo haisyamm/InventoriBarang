@@ -358,6 +358,7 @@
             </footer>
         </div>
     </div>
+    @yield('modal')
     <x-modal.logout />
     <!-- Libs JS -->
     <script src="{{ asset('assets/dist/libs/apexcharts/dist/apexcharts.min.js') }}"></script>

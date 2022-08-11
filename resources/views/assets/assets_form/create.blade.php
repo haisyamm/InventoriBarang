@@ -230,7 +230,7 @@
     const onCreateAsset = () => {
         var dataBatch = getFormInput();
         requestServer({
-            url: '/master/assets/store',
+            url: url + '/master/assets/store',
             data: dataBatch,
             onSuccess: function(response) {
                 console.log(response);

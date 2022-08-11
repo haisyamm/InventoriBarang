@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AssetsModel;
+use App\Models\DetailMaintenancePeriod;
 use App\Models\MaintenancePeriod;
 use App\Models\ProductModel;
 use App\Models\VendorModel;
@@ -43,7 +44,31 @@ class MaintenancePeriodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        //Store to header maintenance period table
+        $period['vendor_code'] = $request->vendor;
+        $period['asset_id'] = $request->assets;
+        $period['service_name'] = $request->service_name;
+        $period['service_date'] = $request->service_date;
+        $period['purchase_order'] = $request->purchase_order;
+        $period['purchase_date'] = $request->purchase_date;
+        $create_period = MaintenancePeriod::create($period);
+
+        //Store to detail maintenance period table
+        $create_detail_period = collect($request->task)->each(function ($val) use ($create_period) {
+            $task['maintenance_period_id'] = $create_period->id;
+            $task['task_name'] = $val['task_name'];
+            $task['task_duration'] = $val['duration'];
+            $task['due_date'] = $val['due_date'];
+            $task['notes'] = $val['notes'];
+            $task['status'] = $val['status'];
+            DetailMaintenancePeriod::create($task);
+        });
+
+        return response()->json([
+            'status' => 'Success',
+            'data' => $create_period,
+        ]);
     }
 
     /**
