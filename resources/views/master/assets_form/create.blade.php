@@ -24,36 +24,20 @@
                             <input type="text" name="" id="" class="form-control mt-1">
                         </div>
                         <div class="col-md-4 form-group mb-3">
-                            <label for="Asset Deskription" class="small fw-bolder text-uppercase">Asset Deskription</label>
-                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Assets Deskription">
-                        </div>
-                        <div class="col-md-4 form-group mb-3">
                             <label for="Asset Name" class="small fw-bolder text-uppercase">Asset Name</label>
                             <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Assets Name">
                         </div>
                         <div class="col-md-4 form-group mb-3">
-                            <label for="Manufacturer" class="small fw-bolder text-uppercase">Manufacturer</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
+                            <label for="Asset Deskription" class="small fw-bolder text-uppercase">Asset Deskription</label>
+                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Assets Deskription">
                         </div>
                         <div class="col-md-4 form-group mb-3">
-                            <label for="Model" class="small fw-bolder text-uppercase">Model</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
+                            <label for="Category" class="small fw-bolder text-uppercase">Category</label>
+                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Assets Deskription">
                         </div>
                         <div class="col-md-4 form-group mb-3">
-                            <label for="Brand" class="small fw-bolder text-uppercase">Brand</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
-                        </div>
-                        <div class="col-md-4 form-group mb-3">
-                            <label for="Supplier" class="small fw-bolder text-uppercase">Supplier</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
-                        </div>
-                        <div class="col-md-4 form-group mb-3">
-                            <label for="Serial No" class="small fw-bolder text-uppercase">Serial No</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
-                        </div>
-                        <div class="col-md-4 form-group mb-3">
-                            <label for="Qr Code" class="small fw-bolder text-uppercase">Qr Code</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
+                            <label for="Type" class="small fw-bolder text-uppercase">Type</label>
+                            <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Assets Deskription">
                         </div>
                     </div>
                 </div>
@@ -63,37 +47,21 @@
                         <circle cx="12" cy="12" r="1"></circle>
                         <circle cx="12" cy="12" r="9"></circle>
                     </svg>
-                    Assignee
+                    Warranty
                 </div>
                 <div class="ps-1">
                     <div class="row" style="margin-top: 25px;">
                         <div class="col-md-4 form-group mb-3">
-                            <label for="Location" class="small fw-bolder text-uppercase">Location</label>
+                            <label for="Warranty Description" class="small fw-bolder text-uppercase">Warranty Description</label>
                             <input type="text" name="" id="" class="form-control mt-1">
                         </div>
                         <div class="col-md-4 form-group mb-3">
-                            <label for="Sub Loacation" class="small fw-bolder text-uppercase">Sub Loacation</label>
+                            <label for="Warranty Exp Date" class="small fw-bolder text-uppercase">Warranty Exp Date</label>
                             <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Assets Deskription">
                         </div>
                         <div class="col-md-4 form-group mb-3">
-                            <label for="Category" class="small fw-bolder text-uppercase">Category</label>
+                            <label for="Warranty Period" class="small fw-bolder text-uppercase">Warranty Period</label>
                             <input type="text" name="" id="" class="form-control mt-1" placeholder="Enter Assets Name">
-                        </div>
-                        <div class="col-md-4 form-group mb-3">
-                            <label for="Type" class="small fw-bolder text-uppercase">Type</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
-                        </div>
-                        <div class="col-md-4 form-group mb-3">
-                            <label for="Company" class="small fw-bolder text-uppercase">Company</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
-                        </div>
-                        <div class="col-md-4 form-group mb-3">
-                            <label for="Department" class="small fw-bolder text-uppercase">Department</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
-                        </div>
-                        <div class="col-md-4 form-group mb-3">
-                            <label for="Assignee" class="small fw-bolder text-uppercase">Assignee</label>
-                            <input type="text" name="" id="" class="form-control mt-1">
                         </div>
                     </div>
                 </div>
