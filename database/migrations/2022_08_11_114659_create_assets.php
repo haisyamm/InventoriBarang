@@ -15,7 +15,7 @@ class CreateAssets extends Migration
     {
         Schema::create('assets', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->bigInteger('user_id')->nullable();
             $table->bigInteger('warranty_id');
             $table->string('delivery_order_number');
             $table->string('name');
@@ -23,6 +23,7 @@ class CreateAssets extends Migration
             $table->string('category');
             $table->string('type');
             $table->string('status');
+            $table->string('order_status');
             $table->timestamps();
         });
     }
