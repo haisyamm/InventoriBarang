@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AssetsModel;
 use App\Models\MaintenancePeriod;
 use App\Models\ProductModel;
 use App\Models\VendorModel;
@@ -28,7 +29,7 @@ class MaintenancePeriodController extends Controller
     public function create()
     {
 
-        $data['product'] = ProductModel::all();
+        $data['assets'] = AssetsModel::all();
         $data['vendor'] = VendorModel::all();
 
         return view('maintenance.period.create', $data);

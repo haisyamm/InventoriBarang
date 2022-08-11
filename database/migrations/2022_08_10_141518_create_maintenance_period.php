@@ -16,7 +16,7 @@ class CreateMaintenancePeriod extends Migration
         Schema::create('maintenance_periods', function (Blueprint $table) {
             $table->id();
             $table->string('vendor_code');
-            $table->string('product_code');
+            $table->string('asset_id');
             $table->string('service_name');
             $table->date('service_date');
             $table->string('purchase_order');

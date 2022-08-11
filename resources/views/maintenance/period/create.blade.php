@@ -54,8 +54,8 @@
                         <div class="col-md-6 form-group mb-3">
                             <label for="Assets" class="small fw-bolder text-uppercase">Assets</label>
                             <select name="vendor_code" id="vendor_code" class="form-control">
-                                @foreach($product as $val)
-                                <option value="{{ $val->code }}">{{ $val->name }}</option>
+                                @foreach($assets as $val)
+                                <option value="{{ $val->id }}">{{ $val->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -94,7 +94,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($product as $val)
+                            @foreach($assets as $val)
                             <tr>
                                 <td>
                                     <span class="text-dark">

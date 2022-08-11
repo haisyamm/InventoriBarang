@@ -31,6 +31,6 @@ class CreateDelivaryOrder extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('delivary_order');
+        Schema::dropIfExists('delivery_order');
     }
 }
