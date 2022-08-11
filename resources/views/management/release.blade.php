@@ -25,37 +25,37 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="table-responsive">
-                <table class="table card-table table-vcenter text-nowrap datatable">
-                    <thead>
-                        <tr>
-                            <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices"></th>
-                            <th>Release Date</th>
-                            <th>Vendor</th>
-                            <th>Total</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($release as $val)
-                        <tr>
-                            <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
-                            <td>{{ Carbon\Carbon::make($val->created_at)->format('d M Y') }}</td>
-                            <td>{{ $val->vendor->name }}</td>
-                            <td>{{ App\Models\GlobalModel::currency_format($val->total) }}</td>
-                            <td>{{ $val->status }}</td>
-                            <td class="text-end">
-                                @if(Auth::user()->role_code == 1)
-                                <span class="cursor-pointer btn btn-danger">Reject</span>
-                                <span class="cursor-pointer btn btn-success">Approve</span>
-                                @endif
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                <div class="table-responsive border">
+                    <table class="table card-table table-vcenter text-nowrap datatable">
+                        <thead>
+                            <tr>
+                                <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices"></th>
+                                <th>Release Date</th>
+                                <th>Vendor</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($release as $val)
+                            <tr>
+                                <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
+                                <td>{{ Carbon\Carbon::make($val->created_at)->format('d M Y') }}</td>
+                                <td>{{ $val->vendor->name }}</td>
+                                <td>{{ App\Models\GlobalModel::currency_format($val->total) }}</td>
+                                <td>{{ $val->status }}</td>
+                                <td class="text-end">
+                                    @if(Auth::user()->role_code == 1)
+                                    <span class="cursor-pointer btn btn-danger">Reject</span>
+                                    <span class="cursor-pointer btn btn-success">Approve</span>
+                                    @endif
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="card-footer d-flex align-items-center">
                 <p class="m-0 text-muted">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>

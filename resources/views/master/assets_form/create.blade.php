@@ -154,6 +154,11 @@
                         </div>
                     </div>
                 </div>
+                <hr>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-light">Cancel</button>
+                    <button class="btn btn-dark ms-3">Add</button>
+                </div>
             </div>
         </div>
     </div>
