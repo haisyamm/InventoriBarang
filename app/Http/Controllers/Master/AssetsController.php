@@ -10,6 +10,7 @@ use App\Models\DepartmentModel;
 use App\Models\ProductModel;
 use App\Models\VendorModel;
 use App\Models\WarrantyModel;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,8 +18,7 @@ class AssetsController extends Controller
 {
     public function index()
     {
-        $data['product'] = ProductModel::all();
-
+        $data['assets'] = AssetsModel::all();
         return view('assets.assets', $data);
     }
 
@@ -33,6 +33,7 @@ class AssetsController extends Controller
         $data['company'] = CompanyModel::all();
         $data['department'] = DepartmentModel::all();
         $data['vendor'] = VendorModel::all();
+        $data['user'] = User::all();
 
         return view('assets.assets_form.create', $data);
     }
@@ -54,7 +55,7 @@ class AssetsController extends Controller
         $create_warranty = WarrantyModel::create($warranty);
 
         //Store to assets table and get delivery id
-        $assets['user_id'] = Auth::user()->id;
+        $assets['user_id'] = $request->user_id;
         $assets['warranty_id'] = $create_warranty->id;
         $assets['delivery_order_number'] = $request->delivery_order_number;
         $assets['name'] = $request->asset_name;
@@ -62,6 +63,7 @@ class AssetsController extends Controller
         $assets['category'] = $request->asset_category;
         $assets['type'] = $request->asset_type;
         $assets['status'] = $request->asset_status;
+        $assets['order_status'] = $request->order_status;
         $create_asset = AssetsModel::create($assets);
 
         $response = $create_asset;
