@@ -94,7 +94,14 @@ class AssetsController extends Controller
 
     public function show($id)
     {
-        $data['assets'] = AssetsModel::where(['id' =>$id])->first();
+        $asset = AssetsModel::where(['id' => $id])->first();
+
+        $data['assets'] = $asset;
+        $data['delivery_order'] = $asset->delivery_order;
+        $data['warranty'] = $asset->warranty;
+
+        echo json_encode($data);
+        die;
         return view('assets.detail', $data);
     }
 }

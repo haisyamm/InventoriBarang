@@ -56,7 +56,9 @@
                     <div class="card-body">
                         <div class="tab-content">
                             <div class="tab-pane active show" id="tabs-assets-detail" role="tabpanel">
-                                <div>Cursus turpis vestibulum, dui in pharetra vulputate id sed non turpis ultricies fringilla at sed facilisis lacus pellentesque purus nibh</div>
+                                <div>
+
+                                </div>
                             </div>
                             <div class="tab-pane" id="tabs-delivery-order" role="tabpanel">
                                 <div>Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem nunc amet, pellentesque id egestas velit sed</div>
