@@ -111,18 +111,3 @@
             </div>
         </div>
         @endsection
-        @push('script')
-        <script>
-            // On Button add clicked
-            const onCreateAsset = () => {
-                var dataBatch = getFormInput();
-                requestServer({
-                    url: url + '/master/assets/store',
-                    data: dataBatch,
-                    onSuccess: function(response) {
-                        console.log(response);
-                    }
-                });
-            }
-        </script>
-        @endpush
