@@ -91,4 +91,10 @@ class AssetsController extends Controller
             'data' => $response,
         ]);
     }
+
+    public function show($id)
+    {
+        $data['assets'] = AssetsModel::where(['id' =>$id])->first();
+        return view('assets.detail', $data);
+    }
 }
