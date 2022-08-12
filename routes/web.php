@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
     //Route::get('/master/my_assets', [App\Http\Controllers\Master\AssetsController::class, 'my_assets'])->name('master.my_assets');
     Route::get('/master/assets/create', [App\Http\Controllers\Master\AssetsController::class, 'create'])->name('master.assets.create');
     Route::post('/master/assets/store', [App\Http\Controllers\Master\AssetsController::class, 'store'])->name('master.assets.store');
+    Route::get('/master/assets/detail/{id}', [App\Http\Controllers\Master\AssetsController::class, 'show'])->name('master.assets.detail');
     
     Route::prefix("master/assets")->group(function () {
         Route::get('/my_assets', [App\Http\Controllers\Master\AssetsController::class, 'my_assets'])->name('master.my_assets');
