@@ -58,10 +58,42 @@
                             <div class="tab-pane active show" id="tabs-assets-detail" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <div>
+                                        <div class="mb-3">
                                             <div class="py-2 px-3 rounded-10 bg-dark-lt">
                                                 <h3 class="mb-0">Asset Name</h3>
-                                                <h3 class="text-capitalize text-muted">{{ $assets->name }}</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $assets->name ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Asset Description</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $assets->description ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Asset Category</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $assets->category ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Asset Type</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $assets->type ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Asset Status</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $assets->status ?? '-' }}</h3>
                                             </div>
                                         </div>
                                     </div>
