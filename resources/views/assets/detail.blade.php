@@ -42,6 +42,16 @@
                                 Delivery Order
                             </a>
                         </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="#tabs-warranty" class="nav-link h2 fw-bolder" data-bs-toggle="tab" aria-selected="true" role="tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                </svg>
+                                warranty
+                            </a>
+                        </li>
                     </ul>
                     <div class="card-body">
                         <div class="tab-content">
@@ -50,6 +60,9 @@
                             </div>
                             <div class="tab-pane" id="tabs-delivery-order" role="tabpanel">
                                 <div>Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem nunc amet, pellentesque id egestas velit sed</div>
+                            </div>
+                            <div class="tab-pane" id="tabs-warranty" role="tabpanel">
+                                <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque ipsa, qui consequatur et quasi obcaecati cum provident, nesciunt dolorem fugit harum maiores necessitatibus commodi voluptas molestias voluptatibus ex deserunt! Earum.</div>
                             </div>
                         </div>
                     </div>
