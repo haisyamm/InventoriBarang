@@ -19,6 +19,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-3">
+                        <div class="card rounded-10">
+                            <div class="card-body border-dashed rounded-10 pb-4">
+                                <h4 class="text-muted text-uppercase">Order Number</h4>
+                                <h4 class="text-fw-bolder">{{ $delivery_order->order_number }}</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="mt-4">
                     <ul class="nav nav-tabs nav-tabs-alt" data-bs-toggle="tabs" role="tablist">
