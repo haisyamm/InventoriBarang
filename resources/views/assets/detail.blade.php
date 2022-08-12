@@ -100,7 +100,48 @@
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-delivery-order" role="tabpanel">
-                                <div>Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem nunc amet, pellentesque id egestas velit sed</div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Order Number</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $delivery_order->order_number ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Order Date</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $delivery_order->order_date ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Company</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $delivery_order->company->name ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Department</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $delivery_order->department->name ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Vendor</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $delivery_order->vendor->name ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="tab-pane" id="tabs-warranty" role="tabpanel">
                                 <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque ipsa, qui consequatur et quasi obcaecati cum provident, nesciunt dolorem fugit harum maiores necessitatibus commodi voluptas molestias voluptatibus ex deserunt! Earum.</div>
