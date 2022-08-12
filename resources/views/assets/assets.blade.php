@@ -80,7 +80,7 @@
                             <tr>
                                 <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
                                 <td class="text-center">
-                                    <a href="#" class="btn btn-icon border-dashed bg-dark-lt">
+                                    <a href="{{ route('master.assets.detail',  $val->id) }}" class="btn btn-icon border-dashed bg-dark-lt">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                             <circle cx="12" cy="12" r="2"></circle>
