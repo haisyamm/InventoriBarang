@@ -28,6 +28,24 @@ class AssetsController extends Controller
         return view('assets.my_assets', $data);
     }
 
+    public function approval()
+    {
+        $data['assets'] = AssetsModel::where(['order_status' => "REQUEST"])->get();
+        return view('assets.approval', $data);
+    }
+
+    public function accept()
+    {
+        $data['assets'] = AssetsModel::where(['order_status' => "ACCEPTED"])->get();
+        return view('assets.accept', $data);
+    }
+
+    public function reject()
+    {
+        $data['assets'] = AssetsModel::where(['order_status' => "REJECTED"])->get();
+        return view('assets.reject', $data);
+    }
+
     public function create()
     {
         $data['company'] = CompanyModel::all();
