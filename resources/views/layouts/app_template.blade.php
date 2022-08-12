@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dashboard - Inventori</title>
+    <title>Dashboard - Assets</title>
     <!-- CSS files -->
     <link href="{{ asset('assets/dist/css/tabler.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/dist/css/tabler-flags.min.css') }}" rel="stylesheet" />
@@ -30,7 +30,7 @@
                 </button>
                 <h1 class="navbar-brand navbar-brand-autodark">
                     <a href=".">
-                        <h2 class="fw-bold">Asset ALFA</h2>
+                        <h2 class="fw-bold">Asset</h2>
                     </a>
                 </h1>
                 <div class="collapse navbar-collapse" id="navbar-menu">
@@ -94,13 +94,13 @@
                                 <a class="dropdown-item" href="{{ route('master.assets') }}">
                                     All
                                 </a>
-                                <a class="dropdown-item" href="{{ route('assets_management.release') }}">
+                                <a class="dropdown-item" href="{{ route('master.approval') }}">
                                     Waiting Approval
                                 </a>
-                                <a class="dropdown-item" href="{{ route('assets_management.release') }}">
+                                <a class="dropdown-item" href="{{ route('master.accept') }}">
                                     Accept
                                 </a>
-                                <a class="dropdown-item" href="{{ route('assets_management.release') }}">
+                                <a class="dropdown-item" href="{{ route('master.reject') }}">
                                     Reject
                                 </a>
                             </div>
@@ -153,16 +153,16 @@
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="./layout-horizontal.html">
-                                    Inventori By Outlet
+                                    Assets By Outlet
                                 </a>
                                 <a class="dropdown-item" href="./layout-boxed.html">
-                                    Inventori By Regional
+                                    Assets By Regional
                                 </a>
                                 <a class="dropdown-item" href="./layout-boxed.html">
-                                    Inventori Check-In & Out
+                                    Assets Check-In & Out
                                 </a>
                                 <a class="dropdown-item" href="./layout-boxed.html">
-                                    Inventori Order & Release
+                                    Assets Order & Release
                                 </a>
                             </div>
                         </li>
