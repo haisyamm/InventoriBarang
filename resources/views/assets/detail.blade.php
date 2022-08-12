@@ -56,8 +56,15 @@
                     <div class="card-body">
                         <div class="tab-content">
                             <div class="tab-pane active show" id="tabs-assets-detail" role="tabpanel">
-                                <div>
-
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div>
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Asset Name</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $assets->name }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-delivery-order" role="tabpanel">
