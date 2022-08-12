@@ -21,72 +21,35 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <ul class="nav nav-tabs nav-tabs-alt" data-bs-toggle="tabs" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-                                <div class="h3 fw-bolder text-uppercase">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-1 mb-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <circle cx="12" cy="12" r="1"></circle>
-                                        <circle cx="12" cy="12" r="9"></circle>
-                                    </svg>
-                                    Asset Detail
-                                </div>
-                            </button>
+                            <a href="#tabs-assets-detail" class="nav-link h2 fw-bolder active" data-bs-toggle="tab" aria-selected="true" role="tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                </svg>
+                                Asset Detail
+                            </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
-                                <div class="h3 fw-bolder text-uppercase">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-1 mb-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <circle cx="12" cy="12" r="1"></circle>
-                                        <circle cx="12" cy="12" r="9"></circle>
-                                    </svg>
-                                    Delivery Order
-                                </div>
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
-                                <div class="h3 fw-bolder text-uppercase">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-1 mb-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <circle cx="12" cy="12" r="1"></circle>
-                                        <circle cx="12" cy="12" r="9"></circle>
-                                    </svg>
-                                    Warranty
-                                </div>
-                            </button>
+                            <a href="#tabs-delivery-order" class="nav-link h2 fw-bolder" data-bs-toggle="tab" aria-selected="true" role="tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                </svg>
+                                Delivery Order
+                            </a>
                         </li>
                     </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade in active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                            <div class="h3 fw-bolder mt-4 text-uppercase">
-                                <div class="ps-1">
-                                    <div class="row" style="margin-top: 25px;">
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label for="Asset Status" class="small fw-bolder text-uppercase">Asset Status :</label>
-                                            <span>{{ $assets->status }}</span>
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label for="Asset Status" class="small fw-bolder text-uppercase">Asset Description :</label>
-                                            <span>{{ $assets->description }}</span>
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label for="Asset Status" class="small fw-bolder text-uppercase">Asset Category :</label>
-                                            <span>{{ $assets->category }}</span>
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label for="Asset Status" class="small fw-bolder text-uppercase">Asset Type :</label>
-                                            <span>{{ $assets->type }}</span>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="tabs-assets-detail" role="tabpanel">
+                                <div>Cursus turpis vestibulum, dui in pharetra vulputate id sed non turpis ultricies fringilla at sed facilisis lacus pellentesque purus nibh</div>
                             </div>
-                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="1">
-
-                            </div>
-                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="2">
+                            <div class="tab-pane" id="tabs-delivery-order" role="tabpanel">
+                                <div>Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem nunc amet, pellentesque id egestas velit sed</div>
                             </div>
                         </div>
                     </div>
