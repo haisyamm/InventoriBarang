@@ -9,7 +9,7 @@
     </div>
     <div class="col-md-12">
         <div class="card">
-            <div class="card-body py-4 px-4">
+            <div class="card-body py-4 px-4" style="min-height: 100vh;">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="card rounded-10">
@@ -144,11 +144,38 @@
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-warranty" role="tabpanel">
-                                <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque ipsa, qui consequatur et quasi obcaecati cum provident, nesciunt dolorem fugit harum maiores necessitatibus commodi voluptas molestias voluptatibus ex deserunt! Earum.</div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Description</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $warranty->description ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Exp Date</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $warranty->exp_date ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <div class="py-2 px-3 rounded-10 bg-dark-lt">
+                                                <h3 class="mb-0">Period</h3>
+                                                <h3 class="text-capitalize text-muted">{{ $warranty->period ?? '-' }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        @endsection
+    </div>
+</div>
+@endsection
